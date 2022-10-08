@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Test Aframe</title>
-        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-        <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> -->
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <title>AR.js Hello World Example</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script type='text/javascript' src='../../../build/aframe-ar-nft.js'></script>
     </head>
     <body>
-        <a-scene vr-mode-ui="enabled: false;"
-                    embedded
-                    arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+    <a-scene
+        vr-mode-ui="enabled: false"
+        arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
+        renderer='antialias: true; alpha: true'>
             <a-camera gps-camera rotation-reader></a-camera>
-            <a-text
-                value="Text content"
-                look-at="[gps-camera]"
-                scale="200 200 200"
-                gps-entity-place="latitude:35.856626120103876;longitude:139.86514915554858"
-                ></a-text>
-        </a-scene>
+            <a-box gps-entity-place='latitude: 35.8566321; longitude: 139.8645945' color='red' scale='20 20 20'></a-box>
+    </a-scene>
     </body>
 </html>
+
