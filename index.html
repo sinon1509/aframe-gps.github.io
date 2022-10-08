@@ -6,14 +6,37 @@
         <script type='text/javascript' src='build/aframe-ar-nft.js'></script>
     </head>
     <body>
+    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+        <button>
+            SHOW GPS
+        </button>
+    </div>
     <a-scene
         vr-mode-ui="enabled: false"
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
         renderer='antialias: true; alpha: true'>
             <a-camera gps-camera rotation-reader></a-camera>
-            <a-box gps-entity-place='latitude: 35.8566321; longitude: 139.8645945' color='red' scale='20 20 20'></a-box>
+            <a-box id="box" gps-entity-place='latitude: 35.8566321; longitude: 139.8645945' color='red' scale='20 20 20'></a-box>
     </a-scene>
 
+    <p id="demo"></p>
+
+    <script>
+        document.querySelector("button").addEventListener("click",(e)=>{
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(getPosition);
+            }
+            function getPosition(position) {
+                var att = "latitude: " + position.coords.latitude + "; " + "longitude: " + position.coords.longitude;
+                console.log(att);
+                var sceneEl = document.querySelector('a-scene');
+                var entity = sceneEl.querySelector('a-box');
+                entity.setAttribute("gps-entity-place", att);
+                console.log("get " + entity.getAttribute("gps-entity-place"));
+            }
+        })
+
+    </script>
     </body>
 </html>
 
