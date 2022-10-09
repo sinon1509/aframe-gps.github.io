@@ -10,7 +10,7 @@
     <body style='margin: 0px; overflow: hidden;'>
     <a-scene
         vr-mode-ui="enabled: false"
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'
         renderer='antialias: true; alpha: true'>
             <a-assets>
                 <a-asset-item id="shiba-inu" src="models/shiba/scene.gltf"></a-asset-item>
@@ -19,7 +19,7 @@
             gps-camera='simulateLatitude: 35.856220; simulateLongitude: 139.865570'
             rotation-reader></a-camera>
             <a-entity gltf-model="#shiba-inu"
-                gps-entity-place='latitude: 35.856220; longitude: 139.865570'
+                gps-entity-place
                 scale="10 10 10"
                 rotation="0 180 0"
             ></a-entity>
