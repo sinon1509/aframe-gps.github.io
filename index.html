@@ -67,8 +67,15 @@
             <a-assets>
                 <a-asset-item id="shiba-inu" src="models/shiba/scene.gltf"></a-asset-item>
             </a-assets>
-            <a-camera
+            <!-- <a-camera
                 gps-camera="simulateLatitude: 35.856233; simulateLongitude: 139.865516; gpsMinDistance: 10; accelerationToMove: 1.0"
+                rotation-reader
+                look-controls-enabled='false'
+                arjs-look-controls='smoothingFactor: 0.1'
+                >
+            </a-camera> -->
+            <a-camera
+                gps-camera="gpsMinDistance: 10; accelerationToMove: 1.0"
                 rotation-reader
                 look-controls-enabled='false'
                 arjs-look-controls='smoothingFactor: 0.1'
