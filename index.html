@@ -12,12 +12,12 @@
         vr-mode-ui="enabled: false"
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; debugUIEnabled: false;'
-        renderer='antialias: true; alpha: true'>
+        renderer='antialias: true;'>
             <a-assets>
                 <a-asset-item id="shiba-inu" src="models/shiba/scene.gltf"></a-asset-item>
             </a-assets>
             <a-camera
-            gps-camera
+            gps-camera="simulateLatitude: 35.856208; simulateLongitude: 139.865555; minDistance: 50; maxDistance: 700;"
             rotation-reader></a-camera>
             <a-entity gltf-model="#shiba-inu"
                 gps-entity-place='latitude: 35.856220; longitude: 139.865570'
