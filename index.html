@@ -16,10 +16,10 @@
                 <a-asset-item id="shiba-inu" src="models/shiba/scene.gltf"></a-asset-item>
             </a-assets>
             <a-camera
-            gps-camera='simulateLatitude: 35.856220; simulateLongitude: 139.865570'
+            gps-camera
             rotation-reader></a-camera>
             <a-entity gltf-model="#shiba-inu"
-                gps-entity-place
+                gps-entity-place='latitude: 35.856220; longitude: 139.865570'
                 scale="10 10 10"
                 rotation="0 180 0"
             ></a-entity>
