@@ -68,8 +68,12 @@
                 <a-asset-item id="shiba-inu" src="models/shiba/scene.gltf"></a-asset-item>
             </a-assets>
             <a-camera
-            gps-camera="simulateLatitude: 35.856233; simulateLongitude: 139.865516; gpsMinDistance: 10; accelerationToMove: 1.0"
-            rotation-reader></a-camera>
+                gps-camera="simulateLatitude: 35.856233; simulateLongitude: 139.865516; gpsMinDistance: 10; accelerationToMove: 1.0"
+                rotation-reader
+                look-controls-enabled='false'
+                arjs-look-controls='smoothingFactor: 0.1'
+                >
+            </a-camera>
             <a-entity gltf-model="#shiba-inu"
                 gps-entity-place='latitude: 35.856220; longitude: 139.865570'
                 scale="1 1 1"
